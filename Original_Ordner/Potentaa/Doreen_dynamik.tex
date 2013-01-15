@@ -1,0 +1,79 @@
+\documentclass[a4paper,11pt,titlepage,smallheadings]{scrreprt}
+
+
+%Konfigurationsdateien
+\include{./config/Pakete}                           %Datei für Pakete etc.
+\include{./config/Grammatik}                        %Datei für Trennung von Worten
+\include{./config/makro}							%Datei für eigene Kommandodefinitionen
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOKUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\include{./config/Konfiguration}                    %Layout und sonstige Definitionen
+
+%% Deckblatt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\input{Titel} 
+
+\begin{titlepage}
+\begin{center}
+\vspace{7cm}
+\huge{\textbf{Übungsaufgaben zur Potentialtheorie}}\\
+\vspace{2cm}
+\large{WiSe 2012/2013}\\
+\vspace{2cm}
+Janina Kammann\\ Marius kriegerowski\\ Moritz Nieschlag\\ Doreen Kasper\\
+\vspace{1cm}
+\today
+
+\end{center}
+\end{titlepage}
+
+
+%% Verzeichnisse %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{page}{1}
+%\tableofcontents %Inhaltsverzeichnis
+%\cleardoublepage
+
+%% Kapitel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headsep 0 cm
+%\input{Einleitung}
+\input{Aufgaben}
+%\input{Oberflaechenstrukturen}
+%\input{Konvektion}
+%\input{Zusammenfassung}
+\cleardoublepage
+%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\headsep = 0.0 cm
+%\pagenumbering{Roman}
+%\bibliography{Literaturverzeichnis}
+%\bibliographystyle{unsrtdin}
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ANHÄNGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{page}{}
+
+\begin{appendix}
+
+\section{Quellcode}
+\subsection{Aufgabe 1}
+\lstinputlisting{aufg1.m}
+%\newpage
+%\subsection{Aufgabe 2}
+%\lstinputlisting{Aufgabe2.m}
+%\newpage
+%\subsection{Aufgabe 3}
+%\lstinputlisting{Aufgabe3.m}
+\end{appendix}
+
+\end{document}
+

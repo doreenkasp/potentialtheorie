@@ -1,0 +1,15 @@
+\chapter{Aufgabe 1}
+Im ersten Aufgabenteil des Übungsblattes sollen drei Sätze Legendre Polynome als Funktion der geographischen Länge und Breite berechnet und programmiert werden. Die jeweiligen Polynome unterscheiden sich durch verschiedene Ordnungen n und Grade m, wobei für diese folgende Bedingung gilt: $m \le n$.\\
+Die in den anschließenden Darstellungen berechneten Polynome definieren sich aus folgender Beziehung:
+
+\begin{equation}
+(A_{n,m}cosm\Phi + B_{n,m}sinm\Phi)*P^{m}_{n}(\theta)
+\end{equation
+
+Laut Aufgabenstellung gilt für die Koeffizienten der Zusammenhang: $A_{n,m}=B_{n,m}=1$
+Da die Legendre-Polynome auf der Verwendung beliebig orthogonaler Funktionen basieren haben wir für die Normalisierung der zonalen Kugelfunktionen eine Schmidt-Normalisierung mittels der Matlabfunktion \textit{'sch'} durchgeführt, sodass aus der Basis des aufgespannten Vektorraums eine Orthnormalbasis konstruiert wird. Durch die Normalisierung wird des Weiteren eine Wichtung der Koeffizienten in einem Intervall von $[-1,1]$vorgenommen.\\
+Die nachfolgenden Darstellungen zeigen die Ergebnisse der programmierten Legendre-Polynome. Der entsprechend dokumentierte Programmcode ist dem Anhang A zu entnehmen.
+
+Die erste Abbildung zeigt eine zonale Darstellung der Legendre-Polynome. In diesem Fall ist die Ordnung des Polynoms stets durch m=0 definiert und der Grad des Polynoms variierbar (hier n=9). Da Polynom $P^{0}_{9}$ definiert sich über 9 Nullstellen und ist unabhängig von den Längengraden ($\theta$) (da m=0). Verschiedene Beispiele zeigen, dass durch Erhöhung der Koeffizienten m und n die beschriebenen Gebiete der Funktion kleiner 'gefächert' sind. 
+Die zweite Abbildung für $P^{6}_{6}$ ist sektoriell, das heißt der Grad des Polynoms entspricht seiner Ordnung sodass gilt: m=n=6. In diesem Fall ist das Polynom unabhängig von dem Breitengrad und durch 12 Nullstellen definiert. Die dritte Graphik veranschaulicht die allgemeine Kugelflächenfunktion $P^{3}_{9}$; eine tesserale Darstellung der unterschiedlichen Koeffizienten. 
+ 

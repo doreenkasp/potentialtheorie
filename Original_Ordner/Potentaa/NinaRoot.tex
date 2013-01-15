@@ -1,0 +1,67 @@
+\documentclass[a4paper]{article}
+\usepackage{german}
+\usepackage{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{epsfig}
+\usepackage{graphicx}
+%\usepackage{sistyle}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\topmargin-1.0cm
+\textheight23.0cm
+\textwidth14cm
+\addtolength{\oddsidemargin}{-0.9cm}
+
+\begin{document}
+
+%\include{Titel}
+\begin{titlepage}
+\begin{center}
+\vspace{7cm}
+\huge{\textbf{Übungsaufgaben zur Potenzialtheorie}}\\
+\vspace{2cm}
+\large{WiSe 2012/2013}\\
+\vspace{2cm}
+Janina Kammann\\ Marius kriegerowski\\ Moritz Nieschlag\\ Doreen Kasper\\
+\vspace{1cm}
+\today
+\end{center}
+\end{titlepage}
+
+
+\thispagestyle{empty} 
+\tableofcontents
+\newpage
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty} 
+
+\newpage
+\setcounter{page}{1}
+\input{Aufgaben}
+\newpage
+\input{aufgabe3}
+
+%% 	APPENDIX-----------------------------------
+%\begin{appendix}
+\appendix
+\newpage
+\section{Quellcode}
+\subsection{Aufgabe 1}
+\lstinputlisting{Potentialtheorie_MM/Aufgabe1.m}
+\newpage
+\subsection{Aufgabe 2}
+\lstinputlisting{Potentialtheorie_MM/Aufgabe2.m}
+\newpage
+\subsection{Aufgabe 3}
+\subsubsection{Hauptprogramm}
+\lstinputlisting{Potentialtheorie_MM/Aufgabe3.m}
+\vspace{2cm}
+\subsubsection{Subprogramm: Berechnen der Kreispunkte}
+\lstinputlisting{Potentialtheorie_MM/kreis.m}
+\vspace{2cm}
+\subsubsection{Subprogramm: Berechnen der Kugel}
+\lstinputlisting{Potentialtheorie_MM/kugel.m}
+%\end{appendix)
+\end{document}

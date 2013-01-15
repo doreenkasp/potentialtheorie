@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Definition des Seitenlayout
+\frenchspacing                                              % Gleicht Abstände zwischen Satzzeichen und Worten an
+
+\fancypagestyle{plain}{\pagestyle{fancy}}                   % Für alle Seiten das identische Layout
+
+\pagestyle{fancy}                                           % Veränderung des Seitenlayouts
+
+\fancyhead[L]{\thepage}                                    % Kopfzeile links, gerade Seitenzahl (Seitenzahl)
+\fancyhead[R]{\leftmark}                                   % Kopfzeile rechts, gerade Seitenzahl (Kapitel)
+\fancyhead[R]{\thepage}                                    % Kopfzeile rechts, ungerade Seitenzahl (Seitenzahl)
+\fancyhead[L]{\leftmark}                                   % Kopfzeile links, ungerade Seitenzahl (Kapitel)
+%\fancyhead[OC]{}                                           % Kopfzeile mittig, ungerade Seitenzahl (leer)
+%\fancyhead[EC]{}                                           % Kopfzeile mittig, ungerade Seitenzahl (leer)
+
+%\fancyfoot[EL]{}                                           % Fußzeile links, gerade Seitenzahl (leer)
+%\fancyfoot[ER]{}                                           % Fußzeile rechts, gerade Seitenzahl (leer)
+%\fancyfoot[OR]{}                                           % Fußzeile rechts, ungerade Seitenzahl (leer)
+%\fancyfoot[OL]{}                                           % Fußzeile links, ungerade Seitenzahl (leer)
+\fancyfoot[OC]{}                                            % Fußzeile mittig, ungerade Seitenzahl (leer)
+\fancyfoot[C]{}                                            % Fußzeile mittig, gerade Seitenzahl (leer)
+\setlength{\oddsidemargin}{0.5cm}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}    % entfernt Wort "Kapitel" aus der Kopfzeile
+\setlength{\parindent}{0pt}                                      % 1. Zeile nach Absatz einrücken (0pt = nicht einrücken)
+
+%\textheight = 690pt                                         % Textbody vergrößert, Standard:595pt 690pt
+\voffset = 1.0 cm                                            % Abstand vom oberen Rand der Seite
+\headsep = 1.0 cm % Abstand zwischen Kopfzeile und Text
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Caption-Formatierung
+\captionsetup{format=hang}                          % Hängende Captions
+\captionsetup{labelfont={bf}}                       % Caption-Bezeichnung ist fett gedruckt
+\captionsetup{font={footnotesize}}                  % Caption kleinere Schrifgröße
+\captionsetup{margin=1cm}                           % Caption Rand links und rechts
+\renewcommand{\figurename}{Abb.}                    % Abbildungsbezeichnung wird mit Abb. abgekürzt
+\renewcommand{\tablename}{Tab.}                     % Tabellenbezeichnung wird mit Tab. abgekürzt
+\subcaphangtrue                                     % Hängende Subcaptions
+
+
+
+                       

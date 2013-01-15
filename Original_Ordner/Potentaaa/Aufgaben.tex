@@ -1,0 +1,100 @@
+\chapter{Aufgabenteil}
+Im Rahmen der Masterveranstaltung \textit{GP-M-POTTHEO} wurden uns die mathematisch-physikalischen Grundlagen der Potentialtheorie vermittelt, welche nun in den folgenden Übungen an ausgewählten geophysikalischen Beispielen veranschaulicht werden. Die hierfür verwendeten Programme sowie graphischen Darstellungen wurden mittels der Software Matlab erstellt und sind dem anschließenden Anhang dieser Arbeit zu entnehmen. Die von uns verwendeten Gleichungen zur Aufgabenbearbeitung basieren auf dem Vorlesungeskript oder in der Vorlesung bereitgestellter Literatur.\\
+\\
+
+Im ersten Aufgabenteil des Übungsblattes sollen drei Sätze Legendre Polynome als Funktion der geographischen Länge und Breite berechnet und programmiert werden. Die jeweiligen Polynome unterscheiden sich durch verschiedene Ordnungen n und Grade m, wobei für diese folgende Bedingung gilt: $m \le n$.\\
+Die in den anschließenden Darstellungen berechneten Polynome definieren sich aus folgender Beziehung:
+
+\begin{equation}
+(A_{n,m}cosm\Phi + B_{n,m}sinm\Phi)*P^{m}_{n}(\theta)
+\end{equation}
+
+Laut Aufgabenstellung gilt für die Koeffizienten der Zusammenhang: $A_{n,m}=B_{n,m}=1$
+Da die Legendre-Polynome auf der Verwendung beliebig orthogonaler Funktionen basieren haben wir für die Normalisierung der zonalen Kugelfunktionen eine Schmidt-Normalisierung mittels der Matlabfunktion \textit{'sch'} durchgeführt, sodass aus der Basis des aufgespannten Vektorraums eine Orthnormalbasis konstruiert wird. Durch die Normalisierung wird des Weiteren eine Wichtung der Koeffizienten in einem Intervall von $[-1,1]$ vorgenommen.\\
+Die nachfolgenden Darstellungen zeigen die Ergebnisse der programmierten Legendre-Polynome. Der entsprechend dokumentierte Programmcode ist dem Anhang A zu entnehmen.\\
+\\
+Die erste Graphik veranschaulicht eine zonale Darstellung der Legendre-Polynome. In diesem Fall ist die Ordnung des Polynoms stets durch m=0 definiert und der Grad des Polynoms variierbar (hier n=9). Da Polynom $P^{0}_{9}$ definiert sich über 9 Nullstellen und ist unabhängig von den Längengraden ($\theta$) (da m=0). Verschiedene Beispiele zeigen, dass durch Erhöhung der Koeffizienten m und n die beschriebenen Gebiete der Funktion kleiner 'gefächert' sind. 
+Die zweite Abbildung für $P^{6}_{6}$ ist sektoriell, das heißt der Grad des Polynoms entspricht seiner Ordnung sodass gilt: m=n=6. In diesem Fall ist das Polynom unabhängig von dem Breitengrad und durch 12 Nullstellen definiert. Die dritte Graphik veranschaulicht die allgemeine Kugelflächenfunktion $P^{3}_{9}$; eine tesserale Darstellung der unterschiedlichen Koeffizienten. 
+ 
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.7]{zonal.eps}
+	\caption{Legendre-Polynom $P^{0}_{9}$ - zonal}
+\end{figure}
+
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.7]{sektoral.eps}
+	\caption{Legendre-Polynom $P^{6}_{6}$ - sektoral}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+	\begin{center}
+	\includegraphics[scale=0.7]{tesseral.eps}
+	\caption{Legendre-Polynom $P^{3}_{9}$ - tesseral}
+	\end{center}
+\end{figure}
+
+
+
+\chapter{Aufgabenteil 2}
+In dieser Aufgabe soll das Schwerefeld der Erde, welches beispielsweise aus Satellitenmessungen bekannt ist mittels der in Aufgabe 1 berechneten Legendre Polynome dargestellt werden. Die dazugehörigen Datensätze zur Berechnung notwendiger Parameter haben wir der Institution des Helmholtz Centre Potsdam (GFZ German Research Centre For Geosciences) aus folgender Internetseite entnommen:\textit{http://icgem.gfz-potsdam.de/ICGEM}.\\
+Für die Aufgabenbearbeitung wurde das Datenfile \textit{osu89a.gfc} verwendet, welches die Koeffizienten der Kugelfunktionsentwicklung bis zu verschiedenen Graden und Ordnungen mit dazugehörigen Standardabweichungen enthält. Das Einlesen des Files erfolgte via load('osu.txt'). Für die Berechnung des Potenzials ist zu beachten, dass die Koeffizienten der Polynome bis zum 10. Grad korrigiert werden (siehe Aufgabenblatt). Aufgrund der linearen Approximation des Potentials wird durch die Korrektur der Koeffizienten erreicht, dass die ersten Terme aus der Reihenentwicklung eine stärkere Wichtung erhalten, sodass ellipsoide Anteile (bzgl. des Referenzellipsoids) im Potentialfeld nicht überwiegen und auch sehr geringe Anomalien zu erkennen sind. Das Programm zur Berechnung des Schwerepotentials ist folgend strukturiert:
+\begin{itemize}
+\item Einlesen des Datenfiles
+\item Deklaration der Variablen
+\item Anordnung der Koeffizienteneinträge in neue Matrizen $C_{nm}$ und $S_{nm}$ mit dazugehörigem Grad und Ordnung
+\item Korrektur der Koeffizienten
+\item Schleife über $\theta$ und $\Phi$
+\item Berechnung der Legendre Polynome (+ Schmidt-Normalisierung)
+\item Berechnung des Potenzials über Schleife (m,n) und Summenbildung
+\item graphische Darstellung des Schwerepotentials
+\end{itemize}
+Eine detaillierte Beschreibung ist dem Programmcode im Anhang zu entnehmen.
+Die Berechnung des Potentials der Erde basiert auf folgendem Zusammenhang:
+\begin{equation}
+U_{g}= \frac{\gamma M}{r}\sum_{n=0}^{\infty}\left(\frac{a}{r}\right)^n\sum_{m=0}^{n} P_{mn}(\theta)[C_{nm}\cos m\Phi + S_{nm}\sin m\Phi]
+\end{equation}
+
+\newpage
+
+Die zwei folgenden Abbildungen zeigen, dass variierende Ordnungen (n) der Legendre Polynome unterschiedliche Ergebnisse für das Schwerepotential liefern. Demnach bestimmt die Höhe der Ordnungen n und damit die Anzahl berechneter Koeffizienten das Auflösungsvermögen der zu ermittelnden Größe. Bei der Berechnung des Potentials mit n=200 werden auch kleinste Anomalien sichtbar, während für n=5 kleinskalige Undulationen nicht berücksichtigt werden. Dies ist auf die kurzwelligen Anteile der Koeffizienten zurückzuführen, welche durch eine hohe Ordnung der Kugelflächenfunktionen sichtbar beziehungsweise für Koeffizienten $n\leq 5$ unterdrückt werden.
+
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.8]{nn5.eps}
+	\caption{Das Schwerepotential für nmax=5 - sehr geringe Auflösung}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{hoch.jpg}
+	\caption{Das Schwerepotential für nmax=200 - geringe Anomalien sichtbar}
+\end{figure}
+
+
+In den anschließenden Abbildungen sind drei Auschnitte dargestellt die besonders starke Schwereanomalien aufweisen. Die Ursache für die langwelligen Anomalien sind auf großräumige Dichtevariationen im Erdmantel beziehungsweise in der Erdkruste zurückzuführen. Eine höhere Gesteinsdichte erzeugt demnach eine zusätzliche Gravitationsbeschleunigung, wodurch der Massenüberschuss eine positive Schwereanomalie bewirkt und das Geoid "ausbeult". Andererseits werden durch geringere Dichten negative Schwereanomalien verursacht die "Eindellungen" des Geoids hervorrufen. Die Ursache für die Dichtevariationen. Die Dichtevariationen im Erdmantel werden durch die Geodynamik der Mantelkonvektion begründet. Demnach weist extrem heißes Mantelmaterial eine geringe Dichte auf und steigt nach oben, wogegen sich kalte Regionen durch eine hohe Dichte ausweisen und absinken. Folglich sind abtauchende Konvektionsströme ursächlich für positive Schwereanomalien (Beulen) und aufsteigende Konvektionsströme verantwortlich für negative Anomalien (Dellen).\\
+Die anschließenden Abbildungen zeigen regionale Beispiele des Schwerepotenzials auf der Erde, welche sich durch unterschiedliche Extrema der Anomalien charakterisieren.\\ Das erste Beispiel (Abbildung ...)umfasst das Gebiet im Süden Indiens. Hier deutet sich ein lokales Minimum des Schwerepotentials an. Dies ist auf einen Chondriteneinschlag zurückzuführen, bei dem Gesteinsfragmente aus der Erdkruste und Materie des Erdmantels abgespaltet und in den Erdorbit transportiert wurde. Aus diesem Ereignis resultierte schließlich die gravitative Akkretion (Formation) des Erdmondes. Des Weiteren zeigt sich auch an der Anomalie im Bereich des Himalya-Gebirges, dass die Topographie zu lateral variablen Massenvariation führt. 
+Direkt neben der stark negativen Anomalie über Indien zeichnet sich dagegen das Gebiet über Indonesien und dem südöstlichen Indischen Ozean durch eine maximal positive Schwereanomlie aus (Abbildung  ...).
+Das letzte Beispiel zeigt einen Ausschnitt einer Subduktionszone die im Westen vor der südamerikanischen Küste liegt und bei der sich die ozeanische Kruste der Nasca-Platte unter die Kontinentalplatte Südamerikas schiebt (Abbildung...).\textbf{?} Im Gegenteil zu der Umgebungsregion definiert sich der Kontinentalrand durch ein lokales Maximum der Schwereanomalie. Dieses kann durch die Zugbelastung der ausgedünnten Platte hervorgerufen werden, da sich das darunter liegende Mantelmaterial nach oben aufwölbt. Eine weitere Ursache für die positive Schwereanomalie ist auf die schweren Basaltintrusionen in die leichtere Kruste zurückzuführen. Negative Schwereanomalien in diesen Bereichen würden dagegen aufgrund der hohen Temperaturen und der Manteldynamik auf eine sehr hohe Aktivität deuten.
+Die folgenden Abbildungen zeigen die zuvor beschriebenen Beispiele:
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{indien.jpg}
+	\caption{Auszug des Schwerepotentials der Erde - Indien}
+\end{figure}
+
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{indonesien.jpg}
+	\caption{Auszug des Schwerepotentials der Erde - Südostasien}
+\end{figure}
+
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{subduktionszone.jpg}
+	\caption{Auszug des Schwerepotentials der Erde - Subduktionszone vor der südamerikanischen Küste}
+\end{figure}
+ 

@@ -1,0 +1,74 @@
+\documentclass[a4paper]{article}
+\usepackage{german}
+\usepackage{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+%\usepackage{sistyle}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\topmargin-1.0cm
+\textheight23.0cm
+\textwidth14cm
+\addtolength{\oddsidemargin}{-0.9cm}
+
+\begin{document}
+
+%\include{Titel}
+\begin{titlepage}
+\begin{center}
+    \vspace{7cm}
+    \rule{1.0\textwidth}{0.8pt}\\
+    \vspace{0.5cm}
+    \huge{\textbf{Übungsaufgaben zur Potenzialtheorie}}\\
+    \vspace{0.5cm}
+    \rule{1.0\textwidth}{0.8pt}\\
+    \vspace{2cm}
+    \large{\textbf{WiSe 2012/2013}}\\
+    \vspace{2cm}
+    Janina Kammann\\ Marius kriegerowski\\ Moritz Nieschlag\\ Doreen Kasper\\
+    \vspace{1cm}
+    \today
+\end{center}
+\end{titlepage}
+
+
+\thispagestyle{empty} 
+\tableofcontents
+\newpage
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty} 
+
+\newpage
+\setcounter{page}{1}
+\input{Aufgaben}
+\newpage
+\input{Aufgabe3}
+
+%% 	APPENDIX-----------------------------------
+%\begin{appendix}
+\appendix
+
+\newpage
+\section{Quellcode}
+\subsection{Aufgabe 1}
+\lstinputlisting{Programmcodes/Aufgabe1.m}
+\newpage
+\subsection{Aufgabe 2}
+\lstinputlisting{Programmcodes/Aufgabe2.m}
+
+\newpage
+\subsection{Aufgabe 3}
+\subsubsection{Hauptprogramm}
+\lstinputlisting{Programmcodes/Aufgabe3.m}
+\vspace{2cm}
+\subsubsection{Subprogramm: Berechnen der Kreispunkte}
+\lstinputlisting{Programmcodes/kreis.m}
+\vspace{2cm}
+\subsubsection{Subprogramm: Berechnen der Kugel}
+\lstinputlisting{Programmcodes/kugel.m}
+%\end{appendix)
+\end{document}

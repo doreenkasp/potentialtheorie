@@ -1,0 +1,45 @@
+% This file was created with JabRef 2.7.2.
+% Encoding: Cp1252
+
+@MANUAL{GeraldSchubert2001,
+  title = {Mantle Convection in the Earth and Planets},
+  author = {Gerald Schubert, Donald L. Turcotte, Peter Olson},
+  organization = {Cambridge University Press},
+  year = {2001},
+  owner = {Netbook},
+  timestamp = {2012.02.02}
+}
+
+@MANUAL{K.M.Alley,
+  title = {Thermal Convection in an initially compositionally stratified Fluid
+	heated from below: Application to a Model for the Evolution of the
+	Moon},
+  author = {K. M. Alley, E. M. Parmentier},
+  organization = {Department of Geological Sciences, Brown University, Providence},
+  owner = {Netbook},
+  timestamp = {2012.02.02}
+}
+
+@MANUAL{Wieczorek2006,
+  title = {Topography of the Moon},
+  author = {Mark A. Wieczorek},
+  year = {2006},
+  note = {The topography of the Moon referenced to the lunar geoid. The topogographic
+	model is derived from the spherical harmonic model USGS359, and the
+	lunar geoid was obtained from the gravity model LP150Q. The color
+	coded topography is overlain on a shaded relief map.},
+  owner = {Netbook},
+  timestamp = {2012.02.02},
+  url = {http://upload.wikimedia.org/wikipedia/commons/d/de/MoonTopoGeoidUSGS.jpg}
+}
+
+@comment{jabref-meta: selector_review:}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+

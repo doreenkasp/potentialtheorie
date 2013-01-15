@@ -1,0 +1,4 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Aufgabenteil 1}{2}
+\contentsline {chapter}{Literaturverzeichnis}{I}
+\contentsline {chapter}{\numberline {A}Anhang}{II}

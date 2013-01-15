@@ -1,0 +1,30 @@
+clear all
+close all
+
+Grad = 19;
+Ordnung = 3;
+
+delta = pi/200;
+theta = 0 : delta : pi; 
+phi = 0 : 2*delta : 2*pi; 
+[phi,theta] = meshgrid(phi,theta);
+
+% Legendre ausrechnen
+Ymn = legendre(Grad,cos(theta(:,1)),'sch');
+
+%Polynome gesuchter Ordung extrahieren:
+Ymn = Ymn(Ordnung+1,:)';
+
+%Grid erstellen:
+yy = Ymn;
+for kk = 2: size(theta,1)
+    yy = [yy Ymn];
+end;
+
+%Werte für phi ausrechnen:
+yy = yy.*cos(Ordnung*phi);
+X=zeros(201);
+Y=zeros(201);
+[phi, theta, yy] = sphere(yy)
+[X,Y,Z] = sphere(yy)
+contourf(yy)

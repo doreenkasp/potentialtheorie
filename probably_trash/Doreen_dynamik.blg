@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Doreen_dynamik.aux
+A level-1 auxiliary file: ./config/Konfiguration.aux
+The style file: unsrtdin.bst
+A level-1 auxiliary file: Anhang.aux
+Database file #1: Literaturverzeichnis.bib
+Warning--empty edition in GeraldSchubert2001
+`address' is a missing field, not a string, for entry GeraldSchubert2001
+while executing---line 1887 of file unsrtdin.bst
+Warning--empty edition in K.M.Alley
+`address' is a missing field, not a string, for entry K.M.Alley
+while executing---line 1887 of file unsrtdin.bst
+Warning--empty year in K.M.Alley
+Warning--empty edition in Wieczorek2006
+Warning--empty address in Wieczorek2006
+(There were 2 error messages)

@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Aufgabe 1}{1}
+\contentsline {subsection}{\numberline {1.1}Teil 1}{1}
+\contentsline {subsection}{\numberline {1.2}Teil 2}{3}
+\contentsline {section}{\numberline {2}Aufgabenteil 3}{8}
+\contentsline {section}{\numberline {A}Quellcode}{12}
+\contentsline {subsection}{\numberline {A.1}Aufgabe 1}{12}
+\contentsline {subsection}{\numberline {A.2}Aufgabe 2}{14}
+\contentsline {subsection}{\numberline {A.3}Aufgabe 3}{16}
+\contentsline {subsubsection}{\numberline {A.3.1}Hauptprogramm}{16}
+\contentsline {subsubsection}{\numberline {A.3.2}Subprogramm: Berechnen der Kreispunkte}{18}
+\contentsline {subsubsection}{\numberline {A.3.3}Subprogramm: Berechnen der Kugel}{18}
