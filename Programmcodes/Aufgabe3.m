@@ -65,7 +65,10 @@ for x_i=1:length(Xrange)
         
 		% mit Vorfaktor multiplizieren
         XYZ(x_i, y_i) = gout*V;
-
+    
+        % horizontalKomponente ausrechnen:
+        XYZ_hori(x_i, y_i) = gout*V*asdlfkj
+        
 	    % Analytische Loesung berchnen
         g_analyt(x_i,y_i)=-4/3*pi*gamma*drho*(R-dz)^3*1/...
           ((PU(1)-Xrange(x_i))^2+(PU(2)-Yrange(y_i))^2+PU(3)^2);
